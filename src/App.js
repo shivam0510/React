@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import LoginComponent from "./components/LoginComponent"
+import './App.sass';
+import Dashboard from './components/Dashboard'
 
 function App() {
+  const [showDashbord, setDashbord] = useState(false);
+  const [name, setName] = useState("");
+
+  function onChange(newValue,newName) {setDashbord(newValue); setName(newName);}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style = {{display : showDashbord && "none"}}>
+        <LoginComponent onLogin={onChange}/>
+      </div>
+      <div style = {{display : !showDashbord && "none"}}>
+        <Dashboard showDashbord={showDashbord} name={name} />
+      </div>
+      
     </div>
   );
 }

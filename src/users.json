@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "Shivam Agarwal",
+        "username" : "shiv",
+        "password" : "shiv"
+    },
+    {
+        "name" : "Rishabh Agarwal",
+        "username" : "rish",
+        "password" : "shiv"
+    },
+    {
+        "name" : "Dan",
+        "username" : "dan",
+        "password" : "dan"
+    },
+    {
+        "name" : "balwan",
+        "username" : "balwan",
+        "password" : "balu"
+    }
+
+]
